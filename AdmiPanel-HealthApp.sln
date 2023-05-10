@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdmiPanel-HealthApp", "AdmiPanel-HealthApp.csproj", "{4EA7BA72-D59F-45FC-95E1-021ECD71A797}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{DC635F82-A9A0-4E84-9B21-F33AC6CF5EE3}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yml = docker-compose.yml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4EA7BA72-D59F-45FC-95E1-021ECD71A797}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4EA7BA72-D59F-45FC-95E1-021ECD71A797}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4EA7BA72-D59F-45FC-95E1-021ECD71A797}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4EA7BA72-D59F-45FC-95E1-021ECD71A797}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {19E6114A-6D27-4AA9-8AD8-8CEE894CCD4A}
+	EndGlobalSection
+EndGlobal

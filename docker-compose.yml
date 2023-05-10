@@ -1,0 +1,7 @@
+﻿services:
+  admipanel-healthapp:
+    image: admipanel-healthapp
+    build:
+      context: .
+      dockerfile: Dockerfile
+  

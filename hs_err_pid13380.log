@@ -1,0 +1,148 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 116352 bytes for Chunk::new
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+#   JVM is running with Unscaled Compressed Oops mode in which the Java heap is
+#     placed in the first 4GB address space. The Java Heap base address is the
+#     maximum limit for the native heap growth. Please use -XX:HeapBaseMinAddress
+#     to set the Java Heap base and to place the Java Heap above 4GB virtual address.
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (arena.cpp:189), pid=13380, tid=21188
+#
+# JRE version: OpenJDK Runtime Environment JBR-17.0.6+10-829.9-jcef (17.0.6+10) (build 17.0.6+10-b829.9)
+# Java VM: OpenJDK 64-Bit Server VM JBR-17.0.6+10-829.9-jcef (17.0.6+10-b829.9, mixed mode, tiered, compressed oops, compressed class ptrs, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Djava.rmi.server.hostname=127.0.0.1 -Duser.timezone=UTC -Xmx1500m -Xms128m --add-exports=java.desktop/sun.awt=ALL-UNNAMED --add-exports=java.desktop/java.awt.peer=ALL-UNNAMED --add-opens=java.desktop/java.awt=ALL-UNNAMED --add-opens=jdk.unsupported/sun.misc=ALL-UNNAMED --add-opens=java.base/java.nio=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED -Dfile.encoding=UTF-8 com.intellij.database.remote.RemoteJdbcServer com.mysql.cj.jdbc.Driver
+
+Host: AMD Ryzen 5 5600H with Radeon Graphics         , 12 cores, 13G,  Windows 10 , 64 bit Build 19041 (10.0.19041.2788)
+Time: Tue May  9 23:41:59 2023  Windows 10 , 64 bit Build 19041 (10.0.19041.2788) elapsed time: 0.652467 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000002be4c825e10):  JavaThread "C2 CompilerThread0" daemon [_thread_in_native, id=21188, stack(0x000000d26f200000,0x000000d26f300000)]
+
+
+Current CompileTask:
+C2:    652  637       4       java.lang.StringLatin1::replace (198 bytes)
+
+Stack: [0x000000d26f200000,0x000000d26f300000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x683c5a]
+V  [jvm.dll+0x842764]
+V  [jvm.dll+0x843f5e]
+V  [jvm.dll+0x8445c3]
+V  [jvm.dll+0x249b75]
+V  [jvm.dll+0xabcac]
+V  [jvm.dll+0xac27c]
+V  [jvm.dll+0x368857]
+V  [jvm.dll+0x332f31]
+V  [jvm.dll+0x3323da]
+V  [jvm.dll+0x21c201]
+V  [jvm.dll+0x21b621]
+V  [jvm.dll+0x1a4fdd]
+V  [jvm.dll+0x22b098]
+V  [jvm.dll+0x229159]
+V  [jvm.dll+0x7f81ac]
+V  [jvm.dll+0x7f270a]
+V  [jvm.dll+0x682a95]
+C  [ucrtbase.dll+0x21bb2]
+C  [KERNEL32.DLL+0x17604]
+C  [ntdll.dll+0x526a1]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x000002be4cd92f30, length=20, elements={
+0x000002be32d0eb40, 0x000002be4be19260, 0x000002be4be19fe0, 0x000002be4c82fe40,
+0x000002be4c830900, 0x000002be4c8311c0, 0x000002be4c831a80, 0x000002be4c825e10,
+0x000002be4c829cc0, 0x000002be4c82a5c0, 0x000002be4c9acdd0, 0x000002be4c9af720,
+0x000002be4ca8a6e0, 0x000002be4cc977c0, 0x000002be4cc9d110, 0x000002be4cd0b4e0,
+0x000002be4cd0b9b0, 0x000002be4ca10960, 0x000002be4ca10e30, 0x000002be4df47390
+}
+
+Java Threads: ( => current thread )
+  0x000002be32d0eb40 JavaThread "main" [_thread_blocked, id=20972, stack(0x000000d26e500000,0x000000d26e600000)]
+  0x000002be4be19260 JavaThread "Reference Handler" daemon [_thread_blocked, id=21484, stack(0x000000d26ec00000,0x000000d26ed00000)]
+  0x000002be4be19fe0 JavaThread "Finalizer" daemon [_thread_blocked, id=18556, stack(0x000000d26ed00000,0x000000d26ee00000)]
+  0x000002be4c82fe40 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=17308, stack(0x000000d26ee00000,0x000000d26ef00000)]
+  0x000002be4c830900 JavaThread "Attach Listener" daemon [_thread_blocked, id=4948, stack(0x000000d26ef00000,0x000000d26f000000)]
+  0x000002be4c8311c0 JavaThread "Service Thread" daemon [_thread_blocked, id=21976, stack(0x000000d26f000000,0x000000d26f100000)]
+  0x000002be4c831a80 JavaThread "Monitor Deflation Thread" daemon [_thread_blocked, id=11648, stack(0x000000d26f100000,0x000000d26f200000)]
+=>0x000002be4c825e10 JavaThread "C2 CompilerThread0" daemon [_thread_in_native, id=21188, stack(0x000000d26f200000,0x000000d26f300000)]
+  0x000002be4c829cc0 JavaThread "C1 CompilerThread0" daemon [_thread_in_native, id=11272, stack(0x000000d26f300000,0x000000d26f400000)]
+  0x000002be4c82a5c0 JavaThread "Sweeper thread" daemon [_thread_blocked, id=6832, stack(0x000000d26f400000,0x000000d26f500000)]
+  0x000002be4c9acdd0 JavaThread "Common-Cleaner" daemon [_thread_blocked, id=3700, stack(0x000000d26f500000,0x000000d26f600000)]
+  0x000002be4c9af720 JavaThread "Notification Thread" daemon [_thread_blocked, id=8704, stack(0x000000d26f600000,0x000000d26f700000)]
+  0x000002be4ca8a6e0 JavaThread "mysql-cj-abandoned-connection-cleanup" daemon [_thread_blocked, id=7544, stack(0x000000d26f800000,0x000000d26f900000)]
+  0x000002be4cc977c0 JavaThread "RMI TCP Accept-7608" daemon [_thread_in_native, id=18972, stack(0x000000d26f900000,0x000000d26fa00000)]
+  0x000002be4cc9d110 JavaThread "RMI TCP Accept-0" daemon [_thread_in_native, id=3824, stack(0x000000d26fa00000,0x000000d26fb00000)]
+  0x000002be4cd0b4e0 JavaThread "RMI Reaper" [_thread_blocked, id=11712, stack(0x000000d26fb00000,0x000000d26fc00000)]
+  0x000002be4cd0b9b0 JavaThread "RMI GC Daemon" daemon [_thread_blocked, id=14924, stack(0x000000d26fc00000,0x000000d26fd00000)]
+  0x000002be4ca10960 JavaThread "RMI TCP Connection(1)-127.0.0.1" daemon [_thread_in_vm, id=1008, stack(0x000000d26fd00000,0x000000d26fe00000)]
+  0x000002be4ca10e30 JavaThread "RMI TCP Connection(2)-127.0.0.1" daemon [_thread_blocked, id=22088, stack(0x000000d26fe00000,0x000000d26ff00000)]
+  0x000002be4df47390 JavaThread "C2 CompilerThread1" daemon [_thread_blocked, id=14484, stack(0x000000d26ff00000,0x000000d270000000)]
+
+Other Threads:
+  0x000002be4bdf5ba0 VMThread "VM Thread" [stack: 0x000000d26eb00000,0x000000d26ec00000] [id=15480]
+  0x000002be4be02010 WatcherThread [stack: 0x000000d26f700000,0x000000d26f800000] [id=2848]
+  0x000002be32d5b310 GCTaskThread "GC Thread#0" [stack: 0x000000d26e600000,0x000000d26e700000] [id=15172]
+  0x000002be32d67ce0 ConcurrentGCThread "G1 Main Marker" [stack: 0x000000d26e700000,0x000000d26e800000] [id=21008]
+  0x000002be32d68600 ConcurrentGCThread "G1 Conc#0" [stack: 0x000000d26e800000,0x000000d26e900000] [id=11088]
+  0x000002be32ddce60 ConcurrentGCThread "G1 Refine#0" [stack: 0x000000d26e900000,0x000000d26ea00000] [id=9744]
+  0x000002be32dde7a0 ConcurrentGCThread "G1 Service" [stack: 0x000000d26ea00000,0x000000d26eb00000] [id=19944]
+
+Threads with active compile tasks:
+C2 CompilerThread0      674  637       4       java.lang.StringLatin1::replace (198 bytes)
+
+VM state: not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x000002be30af1990] Metaspace_lock - owner thread: 0x000002be4ca10960
+
+Heap address: 0x00000000a2400000, size: 1500 MB, Compressed Oops mode: 32-bit
+
+CDS archive(s) not mapped
+Compressed class space mapped at: 0x0000000100000000-0x0000000140000000, reserved size: 1073741824
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 3, Narrow klass range: 0x140000000
+
+GC Precious Log:
+ CPUs: 12 total, 12 available
+ Memory: 14188M
+ Large Page Support: Disabled
+ NUMA Support: Disabled
+ Compressed Oops: Enabled (32-bit)
+ Heap Region Size: 1M
+ Heap Min Capacity: 128M
+ Heap Initial Capacity: 128M
+ Heap Max Capacity: 1500M
+ Pre-touch: Disabled
+ Parallel Workers: 10
+ Concurrent Workers: 3
+ Concurrent Refinement Workers: 10
+ Periodic GC: Disabled
+
+Heap:
+ garbage-first heap   total 131072K, used 7168K [0x00000000a2400000, 0x0000000100000000)
+  region size 1024K, 9 young (9216K), 0 survivors (0K)
+ Metaspace       used 11412K, committed 11648K, reserved 1064960K
+  class space    used 1170K, committed 1280K, reserved 1048576K
+
+Heap Regions: E=young(eden), S=young(survivor), O=old, HS=humongous(starts), HC=humongous(continues), CS=collection set, F=free, OA=open archive, CA=closed archive, TAMS=top-at-mark-start (previous, next)
+|   0|0x00000000a2400000, 0x00000000a2400000, 0x00000000a2500000|  0%| F|  |TAMS 0x00000000a2400000, 0x00000000a2400000| Untracked 
+|   1|0x00000000a2500000, 0x00000000a2500000, 0x00000000a2600000

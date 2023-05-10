@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Data\\AdditionalClasses",
+    "\\Models\\Panel",
+    "\\Views",
+    "\\Views\\Panel",
+    "\\wwwroot",
+    "\\wwwroot\\adminLTE",
+    "\\wwwroot\\adminLTE\\css"
+  ],
+  "SelectedNode": "\\AdmiPanel-HealthApp.csproj",
+  "PreviewInSolutionExplorer": false
+}
